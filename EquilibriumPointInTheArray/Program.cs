@@ -29,31 +29,30 @@ namespace EquilibriumPointInTheArray
 		}
 
 		public static int FindEquilibriumTwo(int[] arr)
-        {
+        	{
 			int arraySum = 0;
 			int leftSum = 0;
 
 			for(int i = 0; i < arr.Length; i++)
-            {
+            		{
 				arraySum += arr[i];
-            }
+            		}
 
 			for(int i = 0; i < arr.Length; i++)
-            {
+            		{
 				arraySum -= arr[i];
 				if (leftSum == arraySum)
-                {
+                		{
 					return i;
-                }
+                	}
 				leftSum += arr[i];
-            }
-			//This is a comment added in the local repo
-			return 0;
+            	}
+		return -1;
         }
 
-		static void Main(string[] args)
+	static void Main(string[] args)
         {
-			int[] arr = new int[] {1, 2, 6, 4, 0, -1 };
+	    int[] arr = new int[] {1, 2, 6, 4, 0, -1 };
             Console.WriteLine("Index is: " + FindEquilibriumTwo(arr));
         }
     }
