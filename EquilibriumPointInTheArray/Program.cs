@@ -47,7 +47,8 @@ namespace EquilibriumPointInTheArray
                 }
 				leftSum += arr[i];
             }
-			return -1;
+			//This is a comment added in the local repo
+			return 0;
         }
 
 		static void Main(string[] args)
